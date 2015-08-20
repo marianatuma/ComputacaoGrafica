@@ -40,6 +40,11 @@
       </toolsSet>
       <compileType>
         <ccTool>
+          <incDir>
+            <pElem>/usr</pElem>
+            <pElem>/usr/include/gtk-3.0/gtk</pElem>
+            <pElem>/usr/include/gtk-3.0/gdk</pElem>
+          </incDir>
           <commandLine>`pkg-config --cflags gtk+-3.0`</commandLine>
         </ccTool>
         <linkerTool>
