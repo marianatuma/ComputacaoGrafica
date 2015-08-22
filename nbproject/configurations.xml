@@ -7,6 +7,7 @@
       <itemPath>Elemento.hpp</itemPath>
       <itemPath>Grafico.hpp</itemPath>
       <itemPath>ListaEnc.hpp</itemPath>
+      <itemPath>Ponto.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -16,6 +17,8 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>ListaEnc.cpp</itemPath>
+      <itemPath>Ponto.cpp</itemPath>
+      <itemPath>Reta.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -59,6 +62,12 @@
       </item>
       <item path="ListaEnc.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Ponto.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Ponto.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Reta.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -89,6 +98,12 @@
       <item path="ListaEnc.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="ListaEnc.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Ponto.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Ponto.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Reta.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

@@ -36,6 +36,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/ListaEnc.o \
+	${OBJECTDIR}/Ponto.o \
+	${OBJECTDIR}/Reta.o \
 	${OBJECTDIR}/main.o
 
 
@@ -67,6 +69,16 @@ ${OBJECTDIR}/ListaEnc.o: ListaEnc.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/usr -I/usr/include/gtk-3.0/gtk -I/usr/include/gtk-3.0/gdk -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ListaEnc.o ListaEnc.cpp
+
+${OBJECTDIR}/Ponto.o: Ponto.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/usr -I/usr/include/gtk-3.0/gtk -I/usr/include/gtk-3.0/gdk -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Ponto.o Ponto.cpp
+
+${OBJECTDIR}/Reta.o: Reta.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/usr -I/usr/include/gtk-3.0/gtk -I/usr/include/gtk-3.0/gdk -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Reta.o Reta.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

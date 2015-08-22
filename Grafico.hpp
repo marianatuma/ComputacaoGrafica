@@ -7,16 +7,25 @@
 
 #ifndef GRAFICO_HPP
 #define	GRAFICO_HPP
+
+#include "ListaEnc.cpp"
+#include "Ponto.hpp"
 class Grafico {
     public:
-        Grafico(int n) {
-            id = n;
+        Grafico(int i) { 
+            id = i; 
+            pontos = new ListaEnc<Ponto>();
         }
-        ~Grafico() {
-            
+        void adicionaPonto(int x, int y) {
+            Ponto p(x, y);
+            pontos->adiciona(p);
         }
-    public:
+        ListaEnc<Ponto>* getPontos() {
+            return pontos;
+        }
+    protected:
         int id;
-    
+        ListaEnc<Ponto>* pontos;
+        Grafico() { }
 };
 #endif	/* GRAFICO_HPP */

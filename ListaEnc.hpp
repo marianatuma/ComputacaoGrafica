@@ -27,7 +27,7 @@ public:
 	bool menor(T dado1, T dado2);
 	void destroiLista();
 
-private: //trocar pra private
+private:
 	Elemento<T>* head;
 	int size;
 };

@@ -1,5 +1,4 @@
 #include "ListaEnc.hpp"
-#include "Grafico.hpp"
 #include <cstdlib>
 #include <iostream>
 
@@ -23,11 +22,13 @@ void ListaEnc<T>::adicionaNoInicio(const T& dado) {
 
 template <class T>
 T ListaEnc<T>::retiraDoInicio(){
-    Elemento<T>* oldHead = head;
-    Elemento<T>* newHead = oldHead->getProximo();
-    head = newHead;
-    return oldHead->getInfo();
-    size--;
+    if(size > 0) {
+        Elemento<T> oldHead = head;
+        Elemento<T> newHead = oldHead.getProximo();
+        head = newHead;
+        size--;
+        return oldHead.getInfo();
+    }
 }
 
 template <class T>
@@ -63,10 +64,8 @@ template <class T>
 int ListaEnc<T>::posicao(const T& dado) const {
     //if(contem(dado)) { //erro, contem não é const
         Elemento<T>* atual = head;
-        Grafico d = static_cast<Grafico>(dado);
         for(int i = 0; i < size; i++) {
-            Grafico e = static_cast<Grafico>(atual->getInfo());
-            if(d.id == e.id){
+            if(igual(dado, atual->getInfo())){
                 return i;
             } else {
                 atual = atual->getProximo();
@@ -78,34 +77,31 @@ int ListaEnc<T>::posicao(const T& dado) const {
 
 template <class T>
 T* ListaEnc<T>::posicaoMem(const T& dado) const {
-//    Elemento<T>* atual = head;
-//    int pos = 0;
-//    Grafico d = static_cast<Grafico>(dado);
-//    Grafico e(0);
-//    while(pos < size) {
-//        e = static_cast<Grafico>(atual->getInfo());
-//        if(d.id = e.id) {
-//            return *atual->getInfo();
-//        } else {
-//            atual = atual->getProximo();
-//        }
-//        pos++;
-//    }
+    Elemento<T>* atual = head;
+    int pos = 0;
+    while(pos < size) {
+        if(igual(dado, atual->getInfo())) {
+            return *atual->getInfo();
+        } else {
+            atual = atual->getProximo();
+        }
+        pos++;
+    }
 }
 
 template <class T>
 bool ListaEnc<T>::contem(const T& dado) {
     int pos = 0;
     Elemento<T>* atual = head;
-    Grafico d = static_cast<Grafico>(dado);
-    while(pos < size) {
-        Grafico e = static_cast<Grafico>(atual->getInfo());
-        if(d.id == e.id)
-            return true;
-        else
-            atual = atual->getProximo();
-        pos++;
-    }    
+//    Grafico d = static_cast<Grafico>(dado);
+//    while(pos < size) {
+//        Grafico e = static_cast<Grafico>(atual->getInfo());
+//        if(d.id == e.id)
+//            return true;
+//        else
+//            atual = atual->getProximo();
+//        pos++;
+//    }    
     return false;
 }
 
@@ -131,26 +127,32 @@ template <class T>
 void ListaEnc<T>::adiciona(const T& dado) {
     if(size == 0) {
         adicionaNoInicio(dado);
+    } else {
+        Elemento<T>* atual = head;
+        Elemento<T>* novo = new Elemento<T>(dado, NULL);
+        for(int i = 0; i < size-1; i++){
+            atual = atual->getProximo();
+        }
+        atual->setProximo(novo);
+        size++;
     }
-    Elemento<T>* atual = head;
-    Elemento<T>* novo = new Elemento<T>(dado, NULL);
-    for(int i = 0; i < size-1; i++){
-        atual = atual->getProximo();
-    }
-    atual->setProximo(novo);
-    size++;
 }
 
 template <class T>
 T ListaEnc<T>::retira(){
-    Elemento<T>* atual = head;
-    for(int i = 0; i < size-2; i++){
-        atual = atual->getProximo();
+    if(size == 1) {
+        return retiraDoInicio();
     }
-    Elemento<T>* r = atual->getProximo();
-    atual->setProximo(NULL);
-    size--;
-    return r->getInfo();
+    if(size > 1){
+        Elemento<T>* atual = head;
+        for(int i = 0; i < size-2; i++){
+            atual = atual->getProximo();
+        }
+        Elemento<T>* r = atual->getProximo();
+        atual->setProximo(NULL);
+        size--;
+        return r->getInfo();
+    }
 } 
 
 template <class T>
