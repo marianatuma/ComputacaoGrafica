@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=WindowViewportC++
+PROJECTNAME=ViewPortWindow
 
 # Active Configuration
 DEFAULTCONF=Debug

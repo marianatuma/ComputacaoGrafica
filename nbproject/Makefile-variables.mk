@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux-x86
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
-CND_ARTIFACT_NAME_Debug=windowviewportc__
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/windowviewportc__
+CND_ARTIFACT_NAME_Debug=viewportwindow
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/viewportwindow
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Debug=windowviewportc++.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/windowviewportc++.tar
+CND_PACKAGE_NAME_Debug=viewportwindow.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/viewportwindow.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux-x86
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86
-CND_ARTIFACT_NAME_Release=windowviewportc__
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/windowviewportc__
+CND_ARTIFACT_NAME_Release=viewportwindow
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/viewportwindow
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Release=windowviewportc++.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/windowviewportc++.tar
+CND_PACKAGE_NAME_Release=viewportwindow.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/viewportwindow.tar
 #
 # include compiler specific variables
 #
