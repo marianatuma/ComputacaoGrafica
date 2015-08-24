@@ -35,7 +35,7 @@ int main (int argc, char **argv) {
     
     Reta r(0);
     r.adicionaPonto(1, 2);
-    r.adicionaPonto(2, 3);
+    //r.adicionaPonto(2, 3);
     ListaEnc<Ponto>* l = r.getPontos();
     Ponto p = l->retira();
     std::cout << p.getX();
