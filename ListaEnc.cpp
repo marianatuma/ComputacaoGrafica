@@ -23,11 +23,11 @@ void ListaEnc<T>::adicionaNoInicio(const T& dado) {
 template <class T>
 T ListaEnc<T>::retiraDoInicio(){
     if(size > 0) {
-        Elemento<T> oldHead = head;
-        Elemento<T> newHead = oldHead.getProximo();
+        Elemento<T>* oldHead = head;
+        Elemento<T>* newHead = oldHead->getProximo();
         head = newHead;
         size--;
-        return oldHead.getInfo();
+        return oldHead->getInfo();
     }
 }
 
